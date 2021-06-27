@@ -1,0 +1,172 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+#navbar {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  row-gap: 20px;
+  position: absolute;
+  padding: 25px;
+  width: 100vw;
+  background: #524444;
+  border: 1px;
+}
+
+#menu {
+  position: absolute;
+  right: 0px;
+
+  width: 60px;
+}
+
+a {
+  text-decoration: none;
+  color: white;
+}
+h1 {
+  font-size: 50px;
+  font-weight: 700;
+  color: white;
+  padding: 10px;
+}
+
+span {
+  color: #706c6c;
+  font-size: 30px;
+}
+
+#welcome-section {
+  padding: 10px;
+  width: 100vw;
+  height: 100vh;
+  background: url("bg.png") #252628;
+  background-size: 100% 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+#projects {
+  background: #45567d;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  row-gap: 30px;
+  align-items: center;
+}
+#projectTitle {
+  padding-top: 40px;
+}
+
+img {
+  width: 100%;
+  height: auto;
+}
+h2,
+h4 {
+  color: white;
+}
+
+h2 {
+  text-align: center;
+  font-size: 30px;
+}
+hr {
+  width: 100vw;
+  border: 1px solid white;
+}
+
+.project-tile {
+  padding-bottom: 10px;
+  background: #303841;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  row-gap: 10px;
+}
+
+#connect {
+  background: #303841;
+  height: 80vh;
+}
+.coffee {
+  color: #c4c5c7;
+  font-style: italic;
+}
+.connectHeader {
+  display: flex;
+  flex-direction: column;
+  padding: 40px;
+  padding-top: 100px;
+  align-items: center;
+  row-gap: 10px;
+}
+
+.social {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  row-gap: 20px;
+}
+
+.firstLine {
+  display: flex;
+  column-gap: 30px;
+}
+.secondLine {
+  display: flex;
+  column-gap: 30px;
+}
+#welcomeHeader {
+  overflow: hidden;
+  margin: 0 auto;
+  letter-spacing: 0.15em;
+  color: yellowgreen;  
+}
+
+#profession {
+  color: rgb(145, 43, 139);
+  background: rgb(180, 172, 172);
+  border-radius: 5px;
+}
+
+.hidden {
+  display: none;
+  visibility: hidden;
+}
+
+@media (min-width: 768px) {
+  #navbar {
+    padding-right: 50px;
+    justify-content: flex-end;
+    column-gap: 50px;
+    font-size: 21px;
+  }
+
+  .project-tile {
+    max-width: 300px;
+  }
+
+  .card-links {
+    display: grid;
+    grid-template-columns: 30vw 30vw 30vw;
+    grid-row-gap: 100px;
+    justify-items: center;
+  }
+
+  #navbar a {
+    writing-mode: vertical-rl;
+    text-orientation: landscape;
+  }
+  #navbar {
+    padding-right: 60px;
+    padding-top: 60px;
+  }
+}
