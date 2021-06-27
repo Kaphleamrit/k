@@ -1,8 +1,10 @@
-* {
+@import url('https://fonts.googleapis.com/css2?family=Arapey&display=swap');
+
+*{
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: "Poppins", sans-serif;
+  font-family: Arapey;
 }
 
 #navbar {
@@ -59,6 +61,7 @@ span {
   flex-direction: column;
   row-gap: 30px;
   align-items: center;
+  animation: pro 5s linear;
 }
 #projectTitle {
   padding-top: 40px;
@@ -67,6 +70,7 @@ span {
 img {
   width: 100%;
   height: auto;
+  border-radius: 15px;
 }
 h2,
 h4 {
@@ -89,6 +93,15 @@ hr {
   flex-direction: column;
   align-items: center;
   row-gap: 10px;
+  border: 1px solid;
+  box-shadow: 4px 8px 6px rgb(143, 83, 83);
+  border-radius: 15px;
+}
+
+.card-links {
+  display: flex;
+  flex-direction: column;
+  row-gap: 100px;
 }
 
 #connect {
@@ -128,18 +141,23 @@ hr {
   overflow: hidden;
   margin: 0 auto;
   letter-spacing: 0.15em;
-  color: yellowgreen;  
+  color: yellowgreen;
 }
 
 #profession {
   color: rgb(145, 43, 139);
   background: rgb(180, 172, 172);
   border-radius: 5px;
+  animation: proff 3s infinite;
 }
 
 .hidden {
   display: none;
   visibility: hidden;
+}
+
+.hideSecondPage {
+  display: none;
 }
 
 @media (min-width: 768px) {
