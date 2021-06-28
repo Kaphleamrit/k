@@ -21,6 +21,7 @@ function changeProfession() {
     var destination = document.getElementById("profession");
     var isFirst = true;
 
+
     setInterval(function() {
         if(isFirst) {
             isFirst = false;
@@ -76,7 +77,7 @@ document.addEventListener('DOMContentLoaded', function() {
 //GSAP
 
 // var tween1 = gsap.to('#profession', {rotation:300,   duration:5});
-var t1 = gsap.timeline();
+// var t1 = gsap.timeline();
 // t1.addLabel("step2",3);
 // t1.to('#profession', {rotation:360, duration:5},1.5)
 //   .to('#welcomeHeader', {y:1000, duration:10}, "-=0.75")
@@ -90,21 +91,66 @@ var t1 = gsap.timeline();
 //   .to(".box2", {duration: 1, y: 200})
 //   .to(".box3", {duration: 3, rotation: 360});
 
-t1.from('#pojectTitle', {x:-200, opacity: 0, duration:2});
+// t1.from('#pojectTitle', {x:-200, opacity: 0, duration:2});
 
 
 
 //scroll Magic
-const controller = new scrollMagic.Controller();
+// const controller = new scrollMagic.Controller();
 
 
-const scene = new ScrollMagic.Scene({
-    triggerElement:"#projects",
-    triggerHook: "onLeave",
-    duration: "100%"
-})
-.setPin("#projects")
-.setTween(t1)
-.addTo(controller);
+// const scene = new ScrollMagic.Scene({
+//     triggerElement:"#projects",
+//     triggerHook: "onLeave",
+//     duration: "100%"
+// })
+// .setPin("#projects")
+// .setTween(t1)
+// .addTo(controller);
+
+// var t1 = gsap.timeline();
+
+// t1.from('.project-tile', { x:-2000})
+// ;
+
+// const controller = new ScrollMagic.Controller();
+
+// const scene = new ScrollMagic.Scene({
+//   triggerElement: '.project-tile',
+//   triggerHook: 1,
+//   duration: '0%'
+// })
+// .setPin(".project-tile")
+// .setTween(t1)
+// .addTo(controller); 
 
 
+// var t2 = gsap.timeline();
+
+// t2.from('#projectTitle', { opacity: 0, duration:2})
+// ;
+
+// const controller2 = new ScrollMagic.Controller();
+
+// const scene2 = new ScrollMagic.Scene({
+//   triggerElement: '#projectTitle',
+//   triggerHook: 1,
+//   duration: '30%',
+//   offset:-80
+// })
+// .setPin("#projectTitle")
+// .setTween(t1)
+// .addTo(controller2); 
+
+gsap.from('.project-tile',
+{
+    scrollTrigger: {
+       trigger: '#projects',
+       start: 'top top'
+    },
+    x:-100,
+    y: 100,
+    opacity: 0,
+    width: 0,
+    duration: 1
+});

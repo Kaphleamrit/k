@@ -1,6 +1,6 @@
-@import url('https://fonts.googleapis.com/css2?family=Arapey&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Arapey&display=swap");
 
-*{
+* {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
@@ -46,7 +46,7 @@ span {
   padding: 10px;
   width: 100vw;
   height: 100vh;
-  background: url("bg.png") #252628;
+  background: #252628;
   background-size: 100% 100%;
   display: flex;
   flex-direction: column;
@@ -55,13 +55,15 @@ span {
 }
 
 #projects {
-  background: #45567d;
+  background: black;
   padding: 10px;
   display: flex;
   flex-direction: column;
   row-gap: 30px;
   align-items: center;
   animation: pro 5s linear;
+  padding-bottom: 150px;
+  min-height: 100vh;
 }
 #projectTitle {
   padding-top: 40px;
