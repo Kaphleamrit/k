@@ -77,27 +77,6 @@ document.addEventListener('DOMContentLoaded', function() {
 //GSAP
 
 //techs
-gsap.from('.techCard:nth-child(odd)', {
-    scrollTrigger: {
-        trigger: '#techs',
-        start: 'top center'
-    },
-    x:2000,
-    y:-100,
-    rotation:180,
-    duration: 1.5
-    });
-
-    gsap.from('.techCard:nth-child(even)', {
-    scrollTrigger: {
-        trigger: '#techs',
-        start: 'top center'
-    },
-    x:-2000,
-    y:100,
-    rotation:180,
-    duration: 1.5
-    });
 
 
 gsap.from('.projectCard',
@@ -131,6 +110,28 @@ gsap.from('.projectCard a', {
     },
     x:2000,
     y:-100,
+    rotation:180,
+    duration: 1.5
+    });
+
+    gsap.from('.techCard:nth-child(odd)', {
+    scrollTrigger: {
+        trigger: '#welcome-section',
+        start: 'top center'
+    },
+    x:2000,
+    y:-100,
+    rotation:180,
+    duration: 1.5
+    });
+
+    gsap.from('.techCard:nth-child(even)', {
+    scrollTrigger: {
+        trigger: '#techs',
+        start: 'top center'
+    },
+    x:-2000,
+    y:100,
     rotation:180,
     duration: 1.5
     });
