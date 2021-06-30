@@ -51,9 +51,9 @@ document.addEventListener('DOMContentLoaded', function() {
     menu.addEventListener('click', function() {
         toHide.classList.toggle("hidden");
         if(toHide.classList.contains("hidden"))
-        menuImg.setAttribute("src","./mm.svg" );
+        menuImg.setAttribute("src","./assets/mm.svg" );
         else 
-        menuImg.setAttribute("src","./cross.svg" );
+        menuImg.setAttribute("src","./assets/cross.svg" );
 
     });
 
@@ -61,7 +61,7 @@ document.addEventListener('DOMContentLoaded', function() {
         console.log("I'm here");
         toHide.classList.add("hidden");
         isNavActive = false;
-        menuImg.setAttribute("src","./mm.svg");
+        menuImg.setAttribute("src","./assets/mm.svg");
     })
     
      changeProfession();
@@ -76,81 +76,62 @@ document.addEventListener('DOMContentLoaded', function() {
 
 //GSAP
 
-// var tween1 = gsap.to('#profession', {rotation:300,   duration:5});
-// var t1 = gsap.timeline();
-// t1.addLabel("step2",3);
-// t1.to('#profession', {rotation:360, duration:5},1.5)
-//   .to('#welcomeHeader', {y:1000, duration:10}, "-=0.75")
-//   .from('#projectTitle', {opacity: 0,duration:5},"step2" )
-// ;
+//techs
+gsap.from('.techCard:nth-child(odd)', {
+    scrollTrigger: {
+        trigger: '#techs',
+        start: 'top center'
+    },
+    x:2000,
+    y:-100,
+    rotation:180,
+    duration: 1.5
+    });
 
-// tween1.timeScale(2);
-// t1.seek("step2");
-
-// tl.to(".box1", {duration: 2, x: 100}) //notice that there's no semicolon!
-//   .to(".box2", {duration: 1, y: 200})
-//   .to(".box3", {duration: 3, rotation: 360});
-
-// t1.from('#pojectTitle', {x:-200, opacity: 0, duration:2});
-
-
-
-//scroll Magic
-// const controller = new scrollMagic.Controller();
-
-
-// const scene = new ScrollMagic.Scene({
-//     triggerElement:"#projects",
-//     triggerHook: "onLeave",
-//     duration: "100%"
-// })
-// .setPin("#projects")
-// .setTween(t1)
-// .addTo(controller);
-
-// var t1 = gsap.timeline();
-
-// t1.from('.project-tile', { x:-2000})
-// ;
-
-// const controller = new ScrollMagic.Controller();
-
-// const scene = new ScrollMagic.Scene({
-//   triggerElement: '.project-tile',
-//   triggerHook: 1,
-//   duration: '0%'
-// })
-// .setPin(".project-tile")
-// .setTween(t1)
-// .addTo(controller); 
+    gsap.from('.techCard:nth-child(even)', {
+    scrollTrigger: {
+        trigger: '#techs',
+        start: 'top center'
+    },
+    x:-2000,
+    y:100,
+    rotation:180,
+    duration: 1.5
+    });
 
 
-// var t2 = gsap.timeline();
-
-// t2.from('#projectTitle', { opacity: 0, duration:2})
-// ;
-
-// const controller2 = new ScrollMagic.Controller();
-
-// const scene2 = new ScrollMagic.Scene({
-//   triggerElement: '#projectTitle',
-//   triggerHook: 1,
-//   duration: '30%',
-//   offset:-80
-// })
-// .setPin("#projectTitle")
-// .setTween(t1)
-// .addTo(controller2); 
-
-gsap.from('.project-tile',
+gsap.from('.projectCard',
 {
     scrollTrigger: {
        trigger: '#projects',
        start: 'top top'
     },
-    x:-100,
+    x:-1000,
     y: 100,
+    rotation:180,
     opacity: 0,
     width: 0,
     duration: 1
 });
+
+gsap.from('.projectCard p', {
+    scrollTrigger: {
+        trigger: '#projects',
+        start: 'top top'
+    },
+    y: -1000,
+    duration:1.5,
+    });
+
+
+gsap.from('.projectCard a', {
+    scrollTrigger: {
+        trigger: '#projects',
+        start: 'top top'
+    },
+    x:2000,
+    y:-100,
+    rotation:180,
+    duration: 1.5
+    });
+
