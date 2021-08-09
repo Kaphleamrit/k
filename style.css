@@ -1,9 +1,8 @@
-    @import url("https://fonts.googleapis.com/css2?family=Arapey&display=swap");
-    * {
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400&display=swap');    * {
         margin: 0;
         padding: 0;
         box-sizing: border-box;
-        font-family: Arapey;
+        font-family: Poppins;
     }
     /* welcome style */
     
@@ -40,6 +39,10 @@
     span {
         color: #706c6c;
         font-size: 30px;
+    }
+    
+    #showLater {
+        visibility: hidden;
     }
     
     #welcome-section {
@@ -98,6 +101,8 @@
         text-align: center;
         row-gap: 20px;
         border: 1px solid brown;
+        transition: all 0.5s ease;
+
     }
     
     .projectCard:hover {
@@ -194,10 +199,10 @@
     }
     
     #profession {
+        min-width: 10px;    
+        font-size: 30px;
         color: rgb(145, 43, 139);
-        background: rgb(180, 172, 172);
-        border-radius: 5px;
-        animation: proff 3s infinite;
+         border-radius: 5px;
     }
     
     .hidden {
@@ -288,6 +293,7 @@
     #submitBtn {
         border: 1px solid rgb(102, 85, 85);
         height: 40px;
+       transition: all 0.5s ease;
     }
 
     #submitBtn:hover {

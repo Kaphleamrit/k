@@ -1,5 +1,4 @@
-var s = "Hey, I am Kaphley";
-var professions = ["a web developer","an android developer"];
+var s = "Hi, I'm Kaphley";
 var currString ;
 var index = 0;
  
@@ -16,28 +15,6 @@ function typewriter(){
  setTimeout("typewriter()",100);
  
 }
-
-function changeProfession() {
-    var destination = document.getElementById("profession");
-    var isFirst = true;
-
-
-    setInterval(function() {
-        if(isFirst) {
-            isFirst = false;
-            destination.innerHTML = professions[0];
-        } else {
-            isFirst = true;
-            destination.innerHTML = professions[1];
-        }
-
-    },2000);
-}
-
-
-
-
-
 document.addEventListener('DOMContentLoaded', function() {
 
     typewriter();
@@ -93,6 +70,7 @@ gsap.from('.projectCard',
     duration: 1
 });
 
+
 gsap.from('.projectCard p', {
     scrollTrigger: {
         trigger: '#projects',
@@ -135,4 +113,19 @@ gsap.from('.projectCard a', {
     rotation:180,
     duration: 1.5
     });
+
+    //Typed profession
+
+    setTimeout(function() {
+        document.getElementById('showLater').style.visibility = 'visible';
+
+
+        let typed = new Typed('#profession', {
+        strings: ['a web developer.', 'an android developer.'],
+        typeSpeed: 80,
+        backSpeed: 20,
+        loop: true
+    });
+    }, 2300);
+    
 
