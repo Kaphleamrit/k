@@ -1,258 +1,330 @@
-@import url("https://fonts.googleapis.com/css2?family=Arapey&display=swap");
+    @import url("https://fonts.googleapis.com/css2?family=Arapey&display=swap");
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: Arapey;
+    }
+    /* welcome style */
+    
+    #navbar {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        row-gap: 20px;
+        position: absolute;
+        padding: 25px;
+        width: 100vw;
+        background: #524444;
+        border: 1px;
+    }
+    
+    #menu {
+        position: absolute;
+        right: 0px;
+        width: 60px;
+    }
+    
+    a {
+        text-decoration: none;
+        color: white;
+    }
+    
+    h1 {
+        font-size: 50px;
+        font-weight: 700;
+        color: white;
+        padding: 10px;
+    }
+    
+    span {
+        color: #706c6c;
+        font-size: 30px;
+    }
+    
+    #welcome-section {
+        padding: 10px;
+        width: 100vw;
+        height: 100vh;
+        background: #252628;
+        background-size: 100% 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        max-width: 100%;
+    }
+    
+    h2 {
+        text-align: center;
+        font-size: 30px;
+    }
+    
+    img {
+        width: 100%;
+        height: auto;
+    }
+    
+    #viewWork {
+        list-style: none;
+        position: absolute;
+        bottom: 0px;
+        background: teal;
+    }
+    /* projects section */
+    
+    #projects {
+        color: white;
+        padding: 60px 20px;
+        background: #252628;
+        max-width: 100%;
+    }
+    
+    #projects h2 {
+        padding-bottom: 50px;
+    }
+    
+    #projectCardContainer {
+        display: flex;
+        flex-direction: column;
+        row-gap: 100px;
+        align-items: center;
+        min-height: 100vh;
+    }
+    
+    .projectCard {
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        row-gap: 20px;
+        border: 1px solid brown;
+    }
+    
+    .projectCard:hover {
+        background: rgb(33, 128, 104);
+    }
+    
+    .projectCard p {
+        display: inline-block;
+        padding: inherit 20px;
+        font-size: 18px;
+    }
+    
+    .projectCard a {
+        background: rgb(116, 42, 139);
+        height: 30px;
+        width: 100px;
+        padding: 5px;
+        border: 0;
+        margin-bottom: 20px;
+        align-self: center;
+    }
+    
+    .projectCard a:hover {
+        background: rgb(71, 18, 87);
+    }
+    
+    .projectCard img {
+        width: 330px;
+        height: 300px;
+    }
+    
+    #projects h4 {
+        font-size: 20px;
+    }
+    /* connect section */
 
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  font-family: Arapey;
-}
+    #goToTop {
+        background-color: transparent;
+        color: rgb(245, 243, 240);
+        border: 2px solid white;
+        border-radius: 0 10px 10px 0;
+        padding: 6px;
+        box-shadow: 3px 3px 2px rgb(41, 41, 110);
+    }
 
-/* first page style */
-#navbar {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-around;
-  row-gap: 20px;
-  position: absolute;
-  padding: 25px;
-  width: 100vw;
-  background: #524444;
-  border: 1px;
-}
+    #goToTop:hover {
+        background-color: rgb(61, 80, 133);
+    }
+    
+    #connect {
+        max-width: 100%;
+        background: #252628;
+        height: 80vh;
+        color: white;
+    }
+    
+    .coffee {
+        color: #c4c5c7;
+        font-style: italic;
+    }
+    
+    .connectHeader {
+        display: flex;
+        flex-direction: column;
+        padding: 40px;
+        padding-top: 100px;
+        align-items: center;
+        row-gap: 10px;
+    }
+    
+    .social {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        row-gap: 20px;
+    }
+    
+    .firstLine {
+        display: flex;
+        column-gap: 30px;
+    }
+    
+    .secondLine {
+        display: flex;
+        column-gap: 30px;
+    }
+    
+    #welcomeHeader {
+        overflow: hidden;
+        margin: 0 auto;
+        letter-spacing: 0.15em;
+        color: yellowgreen;
+    }
+    
+    #profession {
+        color: rgb(145, 43, 139);
+        background: rgb(180, 172, 172);
+        border-radius: 5px;
+        animation: proff 3s infinite;
+    }
+    
+    .hidden {
+        display: none;
+        visibility: hidden;
+    }
+    
+    .hideSecondPage {
+        display: none;
+    }
+    /* techs familiar section */
+    
+    #techs {
+        background-color: black;
+        padding: 50px 20px;
+        min-height: 100vh;
+        color: white;
+        max-width: 100%;
+    }
+    
+    #techs h2 {
+        padding-bottom: 50px;
+    }
+    
+    #techCardContainer {
+        display: grid;
+        grid-template-columns: 150px 150px;
+        grid-template-rows: 200px 200px;
+        justify-content: space-around;
+        grid-row-gap: 35px;
+        text-align: center;
+    }
+    
+    .techCard {
+        border: 0;
+        box-shadow: 2px 4px 2px 2px black;
+        display: flex;
+        flex-direction: column;
+        row-gap: 10px;
+        border-radius: 4px;
+        background: #6a6977;
+    }
+    
+    .techCard:hover {
+        background: #4d4c57;
+    }
+    
+    .techCard img {
+        padding: 40px;
+    }
+    /* form styles */
+    
+    #formContainer {
+        max-width: 100%;
+        height: 100vh;
+        background-color: black;
+        color: white;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        row-gap: 30px;
+    }
 
-#menu {
-  position: absolute;
-  right: 0px;
+    #contactTitle {
+        margin-top: 50px;
+        margin-bottom: 50px ;
+    }
 
-  width: 60px;
-}
+    .myForm {
+        display: flex;
+        flex-direction: column;
+        row-gap: 30px;
+    }
 
-a {
-  text-decoration: none;
-  color: white;
-}
-h1 {
-  font-size: 50px;
-  font-weight: 700;
-  color: white;
-  padding: 10px;
-}
+    .myForm input {
+        height: 30px;
+        width: 300px;
+  
+    }
 
-span {
-  color: #706c6c;
-  font-size: 30px;
-}
+    .myForm input, .myForm textarea {
+      background-color: transparent;
+      border: 0;
+        border-bottom: 3px rgb(50, 49, 109) solid;
+        color: aliceblue;
+    }
 
-#welcome-section {
-  padding: 10px;
-  width: 100vw;
-  height: 100vh;
-  background: #252628;
-  background-size: 100% 100%;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-}
+    #submitBtn {
+        border: 1px solid rgb(102, 85, 85);
+        height: 40px;
+    }
 
-h2 {
-  text-align: center;
-  font-size: 30px;
-}
+    #submitBtn:hover {
+        background-color: rgb(38, 85, 16);
+    }
+    
 
-img {
-  width: 100%;
-  height: auto;
-}
-/* projects section */
-
-#projects {
-  color: white;
-  padding: 60px 20px;
-  background: #252628;
-}
-
-#projects h2 {
-  padding-bottom: 50px;
-}
-
-#projectCardContainer {
-  display: flex;
-  flex-direction: column;
-  row-gap: 100px;
-  align-items: center;
-  min-height: 100vh;
-}
-
-.projectCard {
-  display: flex;
-  flex-direction: column;
-  text-align: center;
-  row-gap: 20px;
-  border: 1px solid brown;
-}
-.projectCard:hover {
-  background: rgb(33, 128, 104);
-}
-.projectCard p {
-  display: inline-block;
-  padding: inherit 20px;
-  font-size: 18px;
-}
-.projectCard a {
-  background: rgb(116, 42, 139);
-  height: 30px;
-  width: 100px;
-  padding: 5px;
-  border: 0;
-  margin-bottom: 20px;
-  align-self: center;
-}
-
-.projectCard a:hover {
-  background: rgb(71, 18, 87);
-}
-.projectCard img {
-  width: 330px;
-  height: 300px;
-}
-
-#projects h4 {
-  font-size: 20px;
-}
-
-/* connect section */
-#connect {
-  background: black;
-  height: 80vh;
-  color: white;
-}
-.coffee {
-  color: #c4c5c7;
-  font-style: italic;
-}
-.connectHeader {
-  display: flex;
-  flex-direction: column;
-  padding: 40px;
-  padding-top: 100px;
-  align-items: center;
-  row-gap: 10px;
-}
-
-.social {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  row-gap: 20px;
-}
-
-.firstLine {
-  display: flex;
-  column-gap: 30px;
-}
-.secondLine {
-  display: flex;
-  column-gap: 30px;
-}
-#welcomeHeader {
-  overflow: hidden;
-  margin: 0 auto;
-  letter-spacing: 0.15em;
-  color: yellowgreen;
-}
-
-#profession {
-  color: rgb(145, 43, 139);
-  background: rgb(180, 172, 172);
-  border-radius: 5px;
-  animation: proff 3s infinite;
-}
-
-.hidden {
-  display: none;
-  visibility: hidden;
-}
-
-.hideSecondPage {
-  display: none;
-}
-
-/* techs familiar section */
-#techs {
-  background-color: black;
-  padding: 50px 20px;
-  min-height: 100vh;
-  color: white;
-}
-
-#techs h2 {
-  padding-bottom: 50px;
-}
-
-#techCardContainer {
-  display: grid;
-  grid-template-columns: 150px 150px;
-  grid-template-rows: 200px 200px;
-  justify-content: space-around;
-  grid-row-gap: 35px;
-  text-align: center;
-}
-
-.techCard {
-  border: 0;
-  box-shadow: 2px 4px 2px 2px black;
-  display: flex;
-  flex-direction: column;
-  row-gap: 10px;
-  border-radius: 4px;
-  background: #6a6977;
-}
-
-.techCard:hover {
-  background: #4d4c57;
-}
-
-.techCard img {
-  padding: 40px;
-}
-
-@media (min-width: 768px) {
-  #navbar {
-    padding-right: 50px;
-    justify-content: flex-end;
-    column-gap: 50px;
-    font-size: 21px;
-  }
-  #navbar a {
-    writing-mode: vertical-rl;
-    text-orientation: landscape;
-  }
-  #navbar {
-    padding-right: 60px;
-    padding-top: 60px;
-  }
-
-  /* tech section */
-
-  .projectCard img {
-    width: 100%;
-    height: 400px;
-  }
-
-  .projectCard {
-    width: 70% !important;
-  }
-
-
-  #projectCardContainer {
-  display: grid;
-  grid-template-columns: auto auto;
-  grid-row-gap:80px;
-  justify-items: center;
-
-}
-}
-/* design a 2 bit refill up async counter 
+    
+    @media (min-width: 768px) {
+        #navbar {
+            padding-right: 50px;
+            justify-content: flex-end;
+            column-gap: 50px;
+            font-size: 21px;
+        }
+        #navbar a {
+            writing-mode: vertical-rl;
+            text-orientation: landscape;
+        }
+        #navbar {
+            padding-right: 60px;
+            padding-top: 60px;
+        }
+        /* tech section */
+        .projectCard img {
+            width: 100%;
+            height: 400px;
+        }
+        .projectCard {
+            width: 70% !important;
+        }
+        #projectCardContainer {
+            display: grid;
+            grid-template-columns: auto auto;
+            grid-row-gap: 80px;
+            justify-items: center;
+        }
+    }
+    /* design a 2 bit refill up async counter 
 design a 2 bit syncronuous up conter using JK flipflop */
