@@ -129,14 +129,14 @@
         <div id="formContainer">
             <h2 id = "contactTitle">Contact</h2>
             <p>Have a question or want to work together?</p>
-            <form class = "myForm" 
-            action = "mailto:kaphleyy@gmail.com"
-            method = "POST"
+            <form class = "myForm"
+            action="https://formspree.io/f/xwkargql" 
+            method="POST"
             >
-                <input type="text" placeholder="Name">
-                <input type="email" placeholder="Email">
-                <textarea rows="10" placeholder="Your Message"></textarea>
-                <input id  = "submitBtn" type="submit" value="SUBMIT">
+                <input name = "Name" type="text" placeholder="Name">
+                <input name = "Email" type="email" placeholder="Email">
+                <textarea name = "message" rows="10" placeholder="Your Message"></textarea>
+                <button id  = "submitBtn" type="submit">SUBMIT</button>
             </form>
 
     </section>

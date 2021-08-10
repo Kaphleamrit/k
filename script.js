@@ -128,4 +128,7 @@ gsap.from('.projectCard a', {
     });
     }, 2300);
     
-
+function handleSubmit() {
+    let url = "https://maker.ifttt.com/trigger/html_form_submit_send_mail/with/key/UUEX5PS4-VLmbOdjp3njK";
+    fetch(url);
+}
