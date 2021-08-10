@@ -140,17 +140,22 @@
     /* connect section */
 
     #goToTop {
-        background-color: transparent;
-        color: rgb(245, 243, 240);
-        border: 2px solid white;
-        border-radius: 0 10px 10px 0;
-        padding: 6px;
-        box-shadow: 3px 3px 2px rgb(41, 41, 110);
+        width: 42px;
+        height: 42px;
+        position: fixed;
+        bottom: 50px;
+        right: 50px;
+        background-color: #a00b67;
+        border-radius: 50%;
+        padding: 10px;
+        box-shadow: 0px 2px 6px rgb(206, 175, 175);
+        transition: all 0.5s ease;
     }
 
     #goToTop:hover {
-        background-color: rgb(61, 80, 133);
+        transform: rotate(360deg) translateY(-8px);
     }
+ 
     
     #connect {
         max-width: 100%;
@@ -293,7 +298,7 @@
     #submitBtn {
       background-color: transparent;
         color: aliceblue;
-        
+
         border: 1px solid rgb(102, 85, 85);
         height: 40px;
        transition: all 0.5s ease;
