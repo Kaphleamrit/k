@@ -5,9 +5,10 @@
     <meta charset="UTF-8">
     <title>Kaphle</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
     <link rel="stylesheet" href="./style.css">
 
-</head> 
+</head>
 
 <body>
 
@@ -20,14 +21,23 @@
 
     <section id="welcome-section">
         <h1 id="welcomeHeader"></h1>
-       <div id= "showLater"> <span>I'm </span><span id="profession"></span>
-    </div></section>
+        <div id="showLater"> <span>I'm </span><span id="profession"></span>
+        </div>
+        <div class="flex-center">
+            <i class="fab fa-twitter fa-2x icon-3d"></i>
+            <i class="fab fa-facebook-f fa-2x icon-3d"></i>
+            <i class="fab fa-instagram fa-2x icon-3d"></i>
+            <i class="fab fa-github fa-2x icon-3d"></i>
+        </div>
+        <form action="assets/cv.png" method="get">
+            <button id="downloadCV" type="submit">MY RESUME <i class="fad fa-download fa-2x"></i></button></form>
+    </section>
 
 
     <!-- techs i am familiar with -->
 
     <section id="techs">
-        <h2 id = "techsIKnow">Technologies I Know So Far...</h2>
+        <h2 id="techsIKnow">Technologies I Know So Far...</h2>
 
         <div id="techCardContainer">
             <div class="techCard">
@@ -65,7 +75,7 @@
 
 
     <!-- projetcs -->
-   <section id="projects">
+    <section id="projects">
         <h2 id="projectTitle">These are some of my projects.</h2>
 
         <div id="projectCardContainer">
@@ -127,43 +137,21 @@
     <!-- form section -->
     <section>
         <div id="formContainer">
-            <h2 id = "contactTitle">Contact</h2>
+            <h2 id="contactTitle">Contact</h2>
             <p>Have a question or want to work together?</p>
-            <form class = "myForm"
-            action="https://formspree.io/f/xwkargql" 
-            method="POST"
-            >
-                <input name = "Name" type="text" placeholder="Name">
-                <input name = "Email" type="email" placeholder="Email">
-                <textarea name = "message" rows="10" placeholder="Your Message"></textarea>
-                <button id  = "submitBtn" type="submit">SUBMIT</button>
+            <form class="myForm" action="https://formspree.io/f/xwkargql" method="POST">
+                <input name="Name" type="text" placeholder="Name">
+                <input name="Email" type="email" placeholder="Email">
+                <textarea name="message" rows="10" placeholder="Your Message"></textarea>
+                <button id="submitBtn" type="submit">SUBMIT</button>
             </form>
 
     </section>
 
-    <section id="connect">
-        <div class="connectHeader">
-            <h2>
-                Let's work together...
-            </h2>
-            <p class="coffee">
-                How do you take your coffee?
-            </p>
-        </div>
-        <div class="social">
-            <div class="firstLine">
-                <a id="profile-link" target="_blank" href="https://github.com/Kaphleamrit">Github</a>
-                <a target="_blank" href="https://www.facebook.com/profile.php?id=100009804213340">Facebook</a>
-            </div>
-            <div class="secondLine">
-                <a target="_blank" href="https://www.instagram.com/kaphle_/">Instagram</a>
-                <a target="_blank" href="mailto:amritkaphle12@gmail.com">Send a mail</a>
-            </div>
-            <a target="_blank" href="tel:+919078423398">Call me</a>
-        </div>
-        <a id="goToTop" href="#welcome-section"><img src="./assets/up.png" alt = "go to top"/></a>
 
-    </section>
+    <a id="goToTop" href="#welcome-section"><img src="./assets/up.png" alt="go to top" /></a>
+
+
 
     <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
     <script src='https://cdnjs.cloudflare.com/ajax/libs/gsap/3.7.0/gsap.min.js'>

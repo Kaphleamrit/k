@@ -1,24 +1,24 @@
 var s = "Hi, I'm Kaphley";
-var currString ;
+var currString;
 var index = 0;
- 
-function typewriter(){
- 
- var destination = document.getElementById("welcomeHeader");
 
- destination.innerHTML = s.substring(0,index) + "_";
-    
- if(index++ >= s.length) {
-     return; 
- }
+function typewriter() {
 
- setTimeout("typewriter()",100);
- 
+    var destination = document.getElementById("welcomeHeader");
+
+    destination.innerHTML = s.substring(0, index) + "_";
+
+    if (index++ >= s.length) {
+        return;
+    }
+
+    setTimeout("typewriter()", 100);
+
 }
 document.addEventListener('DOMContentLoaded', function() {
 
     typewriter();
-   
+
 
     var menuImg = document.getElementById("menuImg");
     var toHide = document.getElementById("navbar");
@@ -27,10 +27,10 @@ document.addEventListener('DOMContentLoaded', function() {
 
     menu.addEventListener('click', function() {
         toHide.classList.toggle("hidden");
-        if(toHide.classList.contains("hidden"))
-        menuImg.setAttribute("src","./assets/mm.svg" );
-        else 
-        menuImg.setAttribute("src","./assets/cross.svg" );
+        if (toHide.classList.contains("hidden"))
+            menuImg.setAttribute("src", "./assets/mm.svg");
+        else
+            menuImg.setAttribute("src", "./assets/cross.svg");
 
     });
 
@@ -38,17 +38,16 @@ document.addEventListener('DOMContentLoaded', function() {
         console.log("I'm here");
         toHide.classList.add("hidden");
         isNavActive = false;
-        menuImg.setAttribute("src","./assets/mm.svg");
+        menuImg.setAttribute("src", "./assets/mm.svg");
     })
-    
-     changeProfession();
 
-     projects.onscroll = function() {
-         if(document.documentElement.scrollTop >100) {
-             projects.classList.remove("hideSecondPage");
-         }
-         else projects.classList.add("hideSecondPage");
-     }
+    changeProfession();
+
+    projects.onscroll = function() {
+        if (document.documentElement.scrollTop > 100) {
+            projects.classList.remove("hideSecondPage");
+        } else projects.classList.add("hideSecondPage");
+    }
 });
 
 //GSAP
@@ -56,15 +55,14 @@ document.addEventListener('DOMContentLoaded', function() {
 //techs
 
 
-gsap.from('.projectCard',
-{
+gsap.from('.projectCard', {
     scrollTrigger: {
-       trigger: '#projects',
-       start: 'top top'
+        trigger: '#projects',
+        start: 'top top'
     },
-    x:-1000,
+    x: -1000,
     y: 100,
-    rotation:180,
+    rotation: 180,
     opacity: 0,
     width: 0,
     duration: 1
@@ -77,8 +75,8 @@ gsap.from('.projectCard p', {
         start: 'top top'
     },
     y: -1000,
-    duration:1.5,
-    });
+    duration: 1.5,
+});
 
 
 gsap.from('.projectCard a', {
@@ -86,48 +84,51 @@ gsap.from('.projectCard a', {
         trigger: '#projects',
         start: 'top top'
     },
-    x:2000,
-    y:-100,
-    rotation:180,
+    x: 2000,
+    y: -100,
+    rotation: 180,
     duration: 1.5
-    });
+});
 
-    gsap.from('.techCard:nth-child(odd)', {
+gsap.from('.techCard:nth-child(odd)', {
     scrollTrigger: {
         trigger: '#welcome-section',
         start: 'top center'
     },
-    x:2000,
-    y:-100,
-    rotation:180,
+    x: 2000,
+    y: -100,
+    rotation: 180,
     duration: 1.5
-    });
+});
 
-    gsap.from('.techCard:nth-child(even)', {
+gsap.from('.techCard:nth-child(even)', {
     scrollTrigger: {
         trigger: '#techs',
         start: 'top center'
     },
-    x:-2000,
-    y:100,
-    rotation:180,
+    x: -2000,
+    y: 100,
+    rotation: 180,
     duration: 1.5
-    });
+});
 
-    //Typed profession
+//Typed profession
 
-    setTimeout(function() {
-        document.getElementById('showLater').style.visibility = 'visible';
+setTimeout(function() {
+    document.getElementById('showLater').style.visibility = 'visible';
 
 
-        let typed = new Typed('#profession', {
-        strings: ['a web developer.', 'an android developer.'],
+    let typed = new Typed("#profession", {
+        strings: [
+            "a web developer.",
+            'an <i class="fab fa-android"></i> developer.',
+        ],
         typeSpeed: 80,
         backSpeed: 20,
-        loop: true
+        loop: true,
     });
-    }, 2300);
-    
+}, 2300);
+
 function handleSubmit() {
     let url = "https://maker.ifttt.com/trigger/html_form_submit_send_mail/with/key/UUEX5PS4-VLmbOdjp3njK";
     fetch(url);
