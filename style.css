@@ -122,6 +122,24 @@ img {
     background: teal;
 }
 
+#profilePic {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    background-color: #2196f3;
+}
+
+#profileImg {
+    border-radius: 50%;
+    border:2px solid #2196f3;
+    transition: 0.5s;
+}
+
+#profileImg:hover {
+    transform: scale(1.5);
+    box-shadow: 4px 4px 8px 2px  rgb(87, 33, 122);
+}
+
 
 /* projects section */
 
