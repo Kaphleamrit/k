@@ -41,8 +41,6 @@ document.addEventListener('DOMContentLoaded', function() {
         menuImg.setAttribute("src", "./assets/mm.svg");
     })
 
-    changeProfession();
-
     projects.onscroll = function() {
         if (document.documentElement.scrollTop > 100) {
             projects.classList.remove("hideSecondPage");
@@ -55,16 +53,19 @@ document.addEventListener('DOMContentLoaded', function() {
 //techs
 
 
+particlesJS.load("particles-js", './particles.json', function() {
+    console.log('particles.js config loaded');
+});
+
+
+
+
 gsap.from('.projectCard', {
     scrollTrigger: {
         trigger: '#projects',
         start: 'top top'
     },
-    x: -1000,
-    y: 100,
-    rotation: 180,
     opacity: 0,
-    width: 0,
     duration: 1
 });
 
@@ -74,7 +75,6 @@ gsap.from('.projectCard p', {
         trigger: '#projects',
         start: 'top top'
     },
-    y: -1000,
     duration: 1.5,
 });
 
@@ -84,10 +84,8 @@ gsap.from('.projectCard a', {
         trigger: '#projects',
         start: 'top top'
     },
-    x: 2000,
-    y: -100,
-    rotation: 180,
-    duration: 1.5
+    opacity: 0,
+    duration: 1
 });
 
 gsap.from('.techCard:nth-child(odd)', {
