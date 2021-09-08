@@ -1,13 +1,13 @@
 {
     "particles": {
         "number": {
-            "value": 100
+            "value": 200
         },
         "color": {
             "value": "#000"
         },
         "shape": {
-            "type": "edge"
+            "type": "circle"
         },
         "size": {
             "value": 2

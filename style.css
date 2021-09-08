@@ -5,10 +5,7 @@
     box-sizing: border-box;
     font-family: Poppins;
 }
-
-
 /* welcome style */
-
 
 .flex-center {
     width: 100%;
@@ -51,16 +48,22 @@
     justify-content: space-around;
     row-gap: 20px;
     position: absolute;
+    right: 10px;
     padding: 25px;
-    width: 100vw;
     background: #524444;
     border: 1px;
+}
+
+#navbar a {
+    z-index: 2;
+    cursor: pointer;
 }
 
 #menu {
     position: absolute;
     right: 0px;
     width: 60px;
+    z-index: 2;
 }
 
 a {
@@ -105,7 +108,7 @@ span {
     max-width: 100%;
 }
 
-#downloadCV {
+.downloadCV button{
     letter-spacing: 4px;
     font-size: 15px;
     background: transparent;
@@ -113,6 +116,10 @@ span {
     border: 0;
     cursor: pointer;
 }
+.downloadCV {
+    z-index: 1;
+}
+
 
 h2 {
     text-align: center;
@@ -136,6 +143,7 @@ img {
     height: 120px;
     border-radius: 50%;
     background-color: #2196f3;
+    z-index: 1;
 }
 
 #profileImg {
@@ -172,10 +180,8 @@ img {
 }
 
 .projectCard {
-    display: flex;
-    flex-direction: column;
+   border-radius: 6px;
     text-align: center;
-    row-gap: 20px;
     border: 1px solid brown;
     transition: all 0.5s ease;
 }
@@ -217,15 +223,14 @@ img {
 /* connect section */
 
 #goToTop {
-    width: 42px;
+     width: 42px;
     height: 42px;
     position: fixed;
     bottom: 50px;
     right: 50px;
-    background: linear-gradient(rgb(207, 166, 31), rgb(195, 9, 212));
+    background-color: rgb(189, 180, 180);
     border-radius: 50%;
     padding: 10px;
-    /* box-shadow: 0px 2px 6px rgb(206, 175, 175); */
     transition: all 0.5s ease;
 }
 
@@ -272,9 +277,6 @@ img {
     max-width: 100%;
 }
 
-#techs h2 {
-    padding-bottom: 50px;
-}
 
 #techCardContainer {
     display: grid;
@@ -285,22 +287,8 @@ img {
     text-align: center;
 }
 
-.techCard {
-    border: 0;
-    box-shadow: 2px 4px 2px 2px black;
-    display: flex;
-    flex-direction: column;
-    row-gap: 10px;
-    border-radius: 4px;
-    background: #6a6977;
-}
-
-.techCard:hover {
-    background: #4d4c57;
-}
-
 .techCard img {
-    padding: 40px;
+    padding: 29px;
 }
 
 
@@ -354,11 +342,17 @@ img {
 }
 
 @media (min-width: 768px) {
+#menu {
+    visibility: hidden;
+}
+
     #navbar {
         padding-right: 50px;
         justify-content: flex-end;
         column-gap: 50px;
         font-size: 21px;
+        visibility: visible;
+        background: transparent;
     }
     #navbar a {
         writing-mode: vertical-rl;
