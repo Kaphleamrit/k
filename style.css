@@ -160,43 +160,44 @@ img {
 
 /* projects section */
 
-#projects {
+ #projects {
     color: white;
     padding: 60px 20px;
     background: #252628;
     max-width: 100%;
+    min-height: 100vh;
 }
 
 #projects h2 {
     padding-bottom: 50px;
 }
 
-#projectCardContainer {
+/* #projectCardContainer {
     display: flex;
     flex-direction: column;
     row-gap: 100px;
     align-items: center;
     min-height: 100vh;
-}
+} */
 
-.projectCard {
+/* .projectCard {
    border-radius: 6px;
     text-align: center;
     border: 1px solid brown;
     transition: all 0.5s ease;
-}
+} */
 
-.projectCard:hover {
+/* .projectCard:hover {
     background: rgb(33, 128, 104);
-}
+} */
 
-.projectCard p {
+/* .projectCard p {
     display: inline-block;
     padding: inherit 20px;
     font-size: 18px;
-}
+} */
 
-.projectCard a {
+/* .projectCard a {
     background: rgb(116, 42, 139);
     height: 30px;
     width: 100px;
@@ -204,21 +205,19 @@ img {
     border: 0;
     margin-bottom: 20px;
     align-self: center;
-}
+} */
 
-.projectCard a:hover {
+/* .projectCard a:hover {
     background: rgb(71, 18, 87);
-}
+} */
 
-.projectCard img {
+.carousel-item img {
     width: 330px;
     height: 300px;
 }
 
-#projects h4 {
-    font-size: 20px;
-}
 
+ 
 
 /* connect section */
 
@@ -375,5 +374,16 @@ img {
         grid-template-columns: auto auto;
         grid-row-gap: 80px;
         justify-items: center;
+    }
+
+    .carousel img {
+        width: 800px;
+        height: 600px;
+    }
+    .carousel  {
+        width: 50vw ;
+        height: 65vh;
+        margin: auto;
+        padding: 10px;
     }
 }
