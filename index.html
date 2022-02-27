@@ -14,9 +14,9 @@
 <body>
 
     <nav id="navbar" class="hidden">
-        <a href="#welcome-section">About</a>
-        <a href="#projects">Work</a>
-        <a href="#formContainer">Contact</a>
+        <a href="#welcome-section" class="colorPara">About</a>
+        <a href="#projects" class="colorPara">Work</a>
+        <a href="#formContainer" class="colorPara">Contact</a>
     </nav>
     <a href="#" id="menu"><img id="menuImg" src="./assets/mm.svg"></a>
  
@@ -35,7 +35,7 @@
             </div>
 
             <a class = "downloadCV"href="./assets/myCV2.pdf" download="AmritKafleResume">
-                <button>MY RESUME <i class="fad fa-download fa-2x"></i>
+                <button><i class="colorPara">MY RESUME</i><i class="fad fa-download fa-2x"></i>
             </button>
 
             </a>
@@ -146,13 +146,18 @@
                 <input name="Name" type="text" placeholder="Name">
                 <input name="Email" type="email" placeholder="Email">
                 <textarea name="message" rows="10" placeholder="Your Message"></textarea>
-                <button id="submitBtn" type="submit">SUBMIT</button>
-            </form>
-
+                <button id="submitBtn" type="submit" class = "colorPara">SUBMIT</button>
+            </form> 
+            <div id = "footer">
+              <p>&copy;copyright<br>Amrit Kaphle</p>
+            </div>
+            </div>
+           
     </section>
 
-
+    <div id = "arrowDiv">
     <a id="goToTop" href="#welcome-section"><img src="./assets/up.png" alt="go to top" /></a>
+</div>
 
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj" crossorigin="anonymous"></script>
