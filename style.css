@@ -12,6 +12,13 @@
     --h2-color: yellowgreen;
 }   
 
+/* for scrollbar */
+body {
+    overflow-x: hidden;
+    
+}
+
+
 .colorPara {
     color: var(--para-color) !important;
 } 
