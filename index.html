@@ -11,7 +11,7 @@
 
 </head>
 
-<body>
+<div>
 
     <nav id="navbar" class="hidden">
         <a href="#welcome-section" class="colorPara">About</a>
@@ -20,10 +20,15 @@
     </nav>
     <a href="#" id="menu"><img id="menuImg" src="./assets/mm.svg"></a>
  
+
+    <section id="profilePic">
+      <img id = "profileImg" src = "./assets/me.jpg" alt= "me" />
+     </section>
+
+
+
+
     <section id="welcome-section">
-    <div id="particles-js"></div>
-    <div id="profilePic">
-            <img id = "profileImg" src = "./assets/me.jpg" alt= "me" /> </div>
             <h1 id="welcomeHeader"></h1>
             <div id="showLater"> <span>I'm </span><span id="profession"></span>
             </div>
@@ -42,10 +47,9 @@
     </section>
 
     <!-- techs i am familiar with -->
-
+<div id = "techsParent">
     <section id="techs">
         <h2 id="techsIKnow">Technologies I Know So Far...</h2>
-
         <div id="techCardContainer">
             <div class="techCard">
                 <img src="./assets/android.png" alt="icon">
@@ -70,10 +74,23 @@
             <div class="techCard">
                 <img src="/assets/linux.png" alt="icon">
             </div>
+
+            <div class="techCard">
+              <img src="/assets/linux.png" alt="icon">
+          </div>
+
+      <div class="techCard">
+        <img src="/assets/linux.png" alt="icon">
+    </div>
         </div>
     </section>
 
+    <object id = "techSvg" data = "./assets/cycle.svg" height="300"></object>
+  </div>
+
     <!-- projetcs -->
+<div id = "projectsParent">
+    <object id = "projectsSvg" data = "./assets/coding.svg" height="300"></object>
 
     <section id = "projects">
         <h2 id="projectTitle">These are some of my projects.</h2>
@@ -128,9 +145,37 @@
             </button>
           </div>
     </section>
+  </div>
+
+    <!-- aboutMe section -->
+    <div id = "aboutMeParent">
+
+    <section id = "aboutMe">
+      <h2 id="Who am i">About me</h2>
+         <p class = "coverInBox">
+        Currently,I live and study in India .
+         I’m a computer science  student . I develop websites and android apps.
+        </p>
+        <p class = "coverInBox">
+  All projects are a problem to be solved, whether it’s to do with design or code—only the tools change. My process is iterative; I approach each problem as a learning experience that informs the rest of the
+   project, which means that I tend to not rely on full design mockups.
+        </p>
+<p class = "coverInBox">
+While my focus is mobile-first responsive websites with HTML, JavaScript,  MySQL , I'm also good at java/Android Studio and python(numpy, pandas).
+I am always experimenting, always learning, and never bored.
+      </p>  
+    </section>
+
+    <object id = "aboutSvg" data = "./assets/certificate.svg" height="300"></object>
+  </div>
 
     <!-- form section -->
-    <section>
+    <section id = "formContainerParent">
+
+
+      
+      <object id = "formSvg" data = "./assets/message.svg" height="400"></object>
+
         <div id="formContainer">
             <h2 id="contactTitle">Contact</h2>
             <p>Have a question or want to work together?</p>
@@ -144,6 +189,7 @@
               <p>&copy;copyright<br>Amrit Kaphle</p>
             </div>
             </div>
+        
            
     </section>
 

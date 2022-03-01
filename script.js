@@ -53,62 +53,62 @@ document.addEventListener('DOMContentLoaded', function() {
 //techs
 
 
-particlesJS.load("particles-js", './particles.json', function() {
-    console.log('particles.js config loaded');
-});
+// particlesJS.load("particles-js", './particles.json', function() {
+//     console.log('particles.js config loaded');
+// });
 
 
 
 
-gsap.from('.projectCard', {
-    scrollTrigger: {
-        trigger: '#projects',
-        start: 'top top'
-    },
-    opacity: 0,
-    duration: 1
-});
+// gsap.from('.projectCard', {
+//     scrollTrigger: {
+//         trigger: '#projects',
+//         start: 'top top'
+//     },
+//     opacity: 0,
+//     duration: 1
+// });
 
 
-gsap.from('.projectCard p', {
-    scrollTrigger: {
-        trigger: '#projects',
-        start: 'top top'
-    },
-    duration: 1.5,
-});
+// gsap.from('.projectCard p', {
+//     scrollTrigger: {
+//         trigger: '#projects',
+//         start: 'top top'
+//     },
+//     duration: 1.5,
+// });
 
 
-gsap.from('.projectCard a', {
-    scrollTrigger: {
-        trigger: '#projects',
-        start: 'top top'
-    },
-    opacity: 0,
-    duration: 1
-});
+// gsap.from('.projectCard a', {
+//     scrollTrigger: {
+//         trigger: '#projects',
+//         start: 'top top'
+//     },
+//     opacity: 0,
+//     duration: 1
+// });
 
-gsap.from('.techCard:nth-child(odd)', {
-    scrollTrigger: {
-        trigger: '#welcome-section',
-        start: 'top center'
-    },
-    x: 2000,
-    y: -100,
-    rotation: 180,
-    duration: 1.5
-});
+// gsap.from('.techCard:nth-child(odd)', {
+//     scrollTrigger: {
+//         trigger: '#welcome-section',
+//         start: 'top center'
+//     },
+//     x: 2000,
+//     y: -100,
+//     rotation: 180,
+//     duration: 1.5
+// });
 
-gsap.from('.techCard:nth-child(even)', {
-    scrollTrigger: {
-        trigger: '#techs',
-        start: 'top center'
-    },
-    x: -2000,
-    y: 100,
-    rotation: 180,
-    duration: 1.5
-});
+// gsap.from('.techCard:nth-child(even)', {
+//     scrollTrigger: {
+//         trigger: '#techs',
+//         start: 'top center'
+//     },
+//     x: -2000,
+//     y: 100,
+//     rotation: 180,
+//     duration: 1.5
+// });
 
 //Typed profession
 
@@ -127,7 +127,7 @@ setTimeout(function() {
     });
 }, 2300);
 
-function handleSubmit() {
-    let url = "https://maker.ifttt.com/trigger/html_form_submit_send_mail/with/key/UUEX5PS4-VLmbOdjp3njK";
-    fetch(url);
-}
+// function handleSubmit() {
+//     let url = "https://maker.ifttt.com/trigger/html_form_submit_send_mail/with/key/UUEX5PS4-VLmbOdjp3njK";
+//     fetch(url);
+// }
