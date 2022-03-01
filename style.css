@@ -277,7 +277,7 @@ img {
 
 #techs {
     background-color: var(--bg-col1);
-    padding: 100px 20px;
+    padding: 140px 20px;
     min-height: 100vh;
     max-width: 100%;
 }
@@ -479,4 +479,38 @@ img {
 
     
 
+}
+
+@media (min-width: 768px) and (max-width: 1168px) { 
+
+    #profilePic {
+        width: 200px;
+        height: 200px;
+    }
+
+    #welcome-section {
+        top: 300px;
+    }
+
+    #techs {
+        margin-top: 160px;
+    }
+
+    #projectsParent {
+        column-gap: 20px;
+    }
+
+    #projects { 
+        margin-right: 100px;
+    }
+
+    #formContainerParent {
+        column-gap: 10px;
+    }
+    #formContainer {
+        margin-right: 100px;
+    }
+
+    #formSvg {
+    }
 }
