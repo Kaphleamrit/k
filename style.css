@@ -22,6 +22,68 @@ body {
     overflow-x: hidden;
 }
 
+#backgroundCircle {
+    width: 20vw;
+    height: 20vw;
+    border-radius: 50%;
+    z-index: -5;
+    background: rgb(137, 203, 221);
+    position: absolute; 
+    animation: outerCircleAnim infinite 3s;
+}
+
+@keyframes outerCircleAnim {
+    0% {
+        top: 40px;
+    }
+
+    50%{
+        top: 350px;
+        left: 150px;
+    }
+
+    /* 75%{
+        right: 20px;
+    } */
+
+    100% {
+            left: 500px;
+        
+    }
+}
+
+#innerCircle {
+    width: 18vw;
+    height: 18vw;
+    border-radius: 30px;
+    background: var(--bg-col1);
+    position: absolute;
+    top: 210px;
+    left: 15px;
+    animation: circleAnimation infinite 3s;
+}
+
+
+
+@keyframes circleAnimation {
+    0% {
+        border-radius: 20px;   
+        top: 40px;
+
+    }
+    50%{
+        border-radius: 70px;
+        top: 350px;
+
+    }
+
+    100% {
+        border-radius: 20px;
+        left: 500px;
+
+    }
+}
+
 
 .colorPara {
     color: var(--para-color) !important;
@@ -466,7 +528,7 @@ img {
 
     #welcome-section {
         top: 200px;
-        left: 10px;
+        left: 60px;
         align-self: center;
     }
 
@@ -477,6 +539,16 @@ img {
         display: none;
     }
 
+    #backgroundCircle {
+        top: 300px;
+        left: 20px;
+    }
+    
+    #innerCircle {
+        top: 260px;
+        left: 15px;
+        animation: infinite circleAnimation 3s;
+    }
     
 
 }
